@@ -13,7 +13,9 @@ public class PlayerController : MonoBehaviour
     /// <summary>The number of times the player can survive traps.</summary>
     public int health = 5;
 
-    /// <summary>A Text element to update as the score changes.</summary>
+    /// <summary>A <see cref="Text"/> element to update as health changes.</summary>
+    public Text healthText;
+    /// <summary>A <see cref="Text"/> element to update as the score changes.</summary>
     public Text scoreText;
 
     // tracks which directions are being held
@@ -111,14 +113,20 @@ public class PlayerController : MonoBehaviour
         }
         else if (other.CompareTag("Trap")) {
             this.health--;
-            Debug.Log(String.Format("Health: {0}", this.health));
+            //Debug.Log(String.Format("Health: {0}", this.health));
+            this.SetHealthText();
         }
         else if (other.CompareTag("Goal")) {
             Debug.Log("You win!");
         }
     }
 
-    /// <summary>Update <see cref="PlayerController.scoreText"/> with the current score.</summary>
+    /// <summary>Update <see cref="healthText"/> with the player's health.</summary>
+    public void SetHealthText() {
+        this.healthText.text = String.Format("Health: {0}", this.health);
+    }
+
+    /// <summary>Update <see cref="scoreText"/> with the current score.</summary>
     public void SetScoreText() {
         this.scoreText.text = String.Format("Score: {0}", this.score);
     }

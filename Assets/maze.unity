@@ -4843,6 +4843,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 12
   health: 5
+  healthText: {fileID: 592968742}
   scoreText: {fileID: 1883608176}
 --- !u!1001 &1292913593
 PrefabInstance:
