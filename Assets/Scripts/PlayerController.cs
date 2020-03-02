@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 /// <summary>Represents the parts of the player object that the player controls.</summary>
 public class PlayerController : MonoBehaviour
@@ -11,6 +12,9 @@ public class PlayerController : MonoBehaviour
 
     /// <summary>The number of times the player can survive traps.</summary>
     public int health = 5;
+
+    /// <summary>A Text element to update as the score changes.</summary>
+    public Text scoreText;
 
     // tracks which directions are being held
     private readonly Stack<Directions> moveStack;
@@ -101,7 +105,8 @@ public class PlayerController : MonoBehaviour
     protected void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Pickup")) {
             this.score++;
-            Debug.Log(String.Format("Score: {0}", this.score));
+            //Debug.Log(String.Format("Score: {0}", this.score));
+            this.SetScoreText();
             Destroy(other.gameObject);
         }
         else if (other.CompareTag("Trap")) {
@@ -111,6 +116,11 @@ public class PlayerController : MonoBehaviour
         else if (other.CompareTag("Goal")) {
             Debug.Log("You win!");
         }
+    }
+
+    /// <summary>Update <see cref="PlayerController.scoreText"/> with the current score.</summary>
+    public void SetScoreText() {
+        this.scoreText.text = String.Format("Score: {0}", this.score);
     }
 
     /// <summary>Process movement key presses.</summary>
