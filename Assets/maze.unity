@@ -2541,7 +2541,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &681949254
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3672,7 +3672,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &937884931
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4997,6 +4997,7 @@ MonoBehaviour:
   speed: 12
   health: 5
   healthText: {fileID: 592968742}
+  resultText: {fileID: 937884932}
   scoreText: {fileID: 1883608176}
 --- !u!1001 &1292913593
 PrefabInstance:

@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
 
     /// <summary>A <see cref="Text"/> element to update as health changes.</summary>
     public Text healthText;
+    /// <summary>A <see cref="Image"/> element to update on loss or victory.</summary>
+    public Image resultText;
     /// <summary>A <see cref="Text"/> element to update as the score changes.</summary>
     public Text scoreText;
 
@@ -117,7 +119,11 @@ public class PlayerController : MonoBehaviour
             this.SetHealthText();
         }
         else if (other.CompareTag("Goal")) {
-            Debug.Log("You win!");
+            //Debug.Log("You win!");
+            this.resultText.gameObject.SetActive(true);
+            this.resultText.GetComponentInChildren<Text>().text = "You Win!";
+            this.resultText.GetComponentInChildren<Text>().color = Color.black;
+            this.resultText.color = Color.green;
         }
     }
 
