@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -95,6 +96,14 @@ public class PlayerController : MonoBehaviour
         this.Position = newPosition;
     }
 
+    /// <summary>Wait some seconds before restarting the game on a loss.</summary>
+    /// <param name="seconds">Number of seconds to wait.</param>
+    /// <returns>A <see cref="WaitForSeconds"/> instance using <paramref name="seconds"/>.</returns>
+    protected IEnumerator LoadScene(float seconds) {
+        yield return new WaitForSeconds(seconds);
+        SceneManager.LoadScene("maze");
+    }
+
     /// <summary>Invalidate the current movement direction and returns the next one.</summary>
     /// <returns>The next direction the player is moving in.</returns>
     protected Directions NextMove() {
@@ -124,6 +133,7 @@ public class PlayerController : MonoBehaviour
             this.resultText.GetComponentInChildren<Text>().text = "You Win!";
             this.resultText.GetComponentInChildren<Text>().color = Color.black;
             this.resultText.color = Color.green;
+            this.StartCoroutine(this.LoadScene(5));
         }
     }
 
@@ -184,6 +194,7 @@ public class PlayerController : MonoBehaviour
             this.resultText.GetComponentInChildren<Text>().text = "Game Over!";
             this.resultText.GetComponentInChildren<Text>().color = Color.white;
             this.resultText.color = Color.red;
+            this.StartCoroutine(this.LoadScene(5));
         }
     }
 }
