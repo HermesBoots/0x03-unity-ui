@@ -178,8 +178,12 @@ public class PlayerController : MonoBehaviour
         }
 
         if (this.health < 1) {
-            Debug.Log("Game Over!");
-            SceneManager.LoadScene("maze");
+            //Debug.Log("Game Over!");
+            //SceneManager.LoadScene("maze");
+            this.resultText.gameObject.SetActive(true);
+            this.resultText.GetComponentInChildren<Text>().text = "Game Over!";
+            this.resultText.GetComponentInChildren<Text>().color = Color.white;
+            this.resultText.color = Color.red;
         }
     }
 }
