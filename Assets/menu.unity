@@ -886,9 +886,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'OPTIONS
-
-'
+  m_Text: 'OPTIONS'
 --- !u!222 &879174166
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1066,9 +1064,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Colorblind Mode
-
-'
+  m_Text: 'Colorblind Mode'
 --- !u!222 &969586004
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1145,9 +1141,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Play
-
-'
+  m_Text: 'Play'
 --- !u!222 &972368304
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1224,9 +1218,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Quit
-
-'
+  m_Text: 'Quit'
 --- !u!222 &986708630
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1303,9 +1295,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Back
-
-'
+  m_Text: 'Back'
 --- !u!222 &991616616
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1817,9 +1807,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Options
-
-'
+  m_Text: 'Options'
 --- !u!222 &2100267727
 CanvasRenderer:
   m_ObjectHideFlags: 0
